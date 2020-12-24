@@ -1,5 +1,5 @@
 ﻿using System;
-using HW1;
+using HW1; // Ссылка на пространство имен HW1
 
 namespace HW2
 {
