@@ -37,7 +37,7 @@ namespace HW2
         // Переопределённый метод ToString
         public override string ToString()
         {
-            return String.Format($"Name Restaraunt: {NameRestaraunt} \nDecription: {DescriptRestoraunt} \nAddress: city. { Address.City} str. {Address.Street} ind. {Address.Index} \n ");
+            return String.Format($"Name Restaraunt: {NameRestaraunt} \nDecription: {DescriptRestoraunt} \nAddress: city. { Address.City} str. {Address.Street}");
         }
     }
 }

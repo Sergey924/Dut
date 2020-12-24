@@ -10,7 +10,6 @@ namespace HW2
         // Автосвойства 
         public string City { get; set; }
         public string Street { get; set; }
-        public string Index { get; set; }
 
         // Конструктор
         public Address(string city, string street)
