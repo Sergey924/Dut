@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HW1
+namespace HW2
 {
- // Класс Компания
-    public  class Company : Description // Наследует класс Description
+    // Класс Ресторан наследует класс Описание
+    class Restaurant : Description
     {
-       // Свойства класса
-        public string NameCompany { get; set; }
+        // Автосвойства
+        public string NameRestaraunt { get; set; }
         Address Address { get; set; }
 
         // Конструктор
-        public Company(string nameCompany, Address address )
+        public Restaurant(string nameRestaraunt, Address address)
         {
-            NameCompany = nameCompany;
+            NameRestaraunt = nameRestaraunt;
             Address = address;
-            
         }
-        // Лист в котором хранятся данные о сотрудниках
+
+        // Лист в котором хранятся данные о работниках
 
         List<Employee> employees = new List<Employee>();
 
@@ -35,12 +35,9 @@ namespace HW1
         }
 
         // Переопределённый метод ToString
-        public override string  ToString()
+        public override string ToString()
         {
-            return String.Format($"Name Company: {NameCompany} \nDecription: {DescriptCompany} \nAddress: city. { Address.City} str. {Address.Street} ");
+            return String.Format($"Name Restaraunt: {NameRestaraunt} \nDecription: {DescriptRestoraunt} \nAddress: city. { Address.City} str. {Address.Street} ind. {Address.Index} \n ");
         }
     }
-
-    
-
 }

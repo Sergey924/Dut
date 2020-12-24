@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HW1
+namespace HW2
 {
     // Класс Заказы
     class Order
     {
-        // Свойства
+        // Автосвойства
         public int ID_Order { get; set; }
         public string TypeOrder { get; set; }
         Client Client { get; set; }
@@ -16,7 +16,7 @@ namespace HW1
 
         Random rnd = new Random();
 
-        // Конструктор 
+        // Конструктор
         public Order(string typeOrder, Client client)
         {
             ID_Order = rnd.Next(0_10000);
@@ -24,8 +24,7 @@ namespace HW1
             Client = client;
         }
 
-        // Лист в котором хранятся заказы
-
+        // Лист в котором хранятся все заказы
         List<Order> orders = new List<Order>();
 
         // Метод добавления заказа
@@ -40,5 +39,6 @@ namespace HW1
         {
             orders.Remove(order);
         }
+
     }
 }

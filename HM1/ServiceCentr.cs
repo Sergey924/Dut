@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HM1
+namespace HW1
 { 
     // Класс Сервисный Центр
     class ServiceCentr 

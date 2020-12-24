@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HW1
+namespace HW2
 {
     // Класс Адрес
-   public class Address
+    class Address
     {
-        // Свойства класса
+        // Автосвойства 
         public string City { get; set; }
         public string Street { get; set; }
+        public string Index { get; set; }
 
         // Конструктор
         public Address(string city, string street)

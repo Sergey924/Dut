@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HW1
+namespace HW2
 {
     // Класс Сотрудники
-    public class Employee
+    class Employee
     {
         // Автосвойства 
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string FullName { get; set; }
 
-        //Конструктор
+        // Конструктор
         public Employee(string firstName, string secondName)
         {
             FirstName = firstName;
