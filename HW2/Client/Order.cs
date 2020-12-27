@@ -20,7 +20,17 @@ namespace HW2
         public Order(string typeOrder, Client client)
         {
             ID_Order = rnd.Next(0_10000);
+
+            // Проверка
+            if (string.IsNullOrWhiteSpace(typeOrder))
+            {
+                throw new ArgumentNullException(nameof(typeOrder));
+            }
+            else
+            { 
             TypeOrder = typeOrder;
+            }
+
             Client = client;
         }
 

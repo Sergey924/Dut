@@ -15,9 +15,33 @@ namespace HW2
         // Конструктор
         public Beverage(string nameBeverage, double weightBeverage, decimal priceBeverage)
         {
-            NameBeverage = nameBeverage;
+            // Проверки
+            if (string.IsNullOrWhiteSpace(nameBeverage))
+            {
+                throw new ArgumentNullException(nameof(nameBeverage));
+            }
+            else
+            {
+                NameBeverage = nameBeverage;
+            }
+
+            if (weightBeverage <= 0)
+            {
+                throw new ArgumentNullException(nameof(weightBeverage));
+            }
+            else
+            { 
             WeightBeverage = weightBeverage;
+            }
+
+            if(priceBeverage <= 0)
+            {
+                throw new ArgumentNullException(nameof(priceBeverage));
+            }
+            else
+            { 
             PriceBeverage = priceBeverage;
+            }
         }
     }
 }

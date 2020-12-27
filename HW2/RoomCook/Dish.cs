@@ -15,8 +15,33 @@ namespace HW2
         // Конструктор
         public Dish(string nameDish, double weightDish, decimal priceDish)
         {
-            NameDish = nameDish;
+            // Проверки
+            if (string.IsNullOrWhiteSpace(nameDish))
+            {
+                throw new ArgumentNullException(nameof(nameDish));
+            }
+            else
+            {
+                NameDish = nameDish;
+            }
+
+            if(priceDish <= 0)
+            {
+                throw new ArgumentNullException(nameof(priceDish));
+            }
+            else
+            { 
             PriceDish = priceDish;
+            }
+
+            if (weightDish <= 0)
+            {
+                throw new ArgumentNullException(nameof(weightDish));
+            }
+            else
+            {
+                WeightDish = weightDish;
+            }
         }
     }
 }

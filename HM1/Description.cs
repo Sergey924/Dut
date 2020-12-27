@@ -11,7 +11,6 @@ namespace HW1
   public  class Description
     {
         // Поле
-        
         public string DescriptCompany = "Delivery of software for the construction industry.";
 
     }

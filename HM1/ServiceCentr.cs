@@ -14,7 +14,16 @@ namespace HW1
         // Конструктор
         public ServiceCentr(string nameCentr, Address address) 
         {
-            NameCentr = nameCentr;
+            // Проверка
+            if (string.IsNullOrWhiteSpace(nameCentr))
+            {
+                throw new ArgumentNullException(nameof(nameCentr));
+            }
+            else
+            {
+                NameCentr = nameCentr;
+            }
+
             Address = address;
         }
 

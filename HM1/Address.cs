@@ -14,8 +14,24 @@ namespace HW1
         // Конструктор
         public Address(string city, string street)
         {
-            City = city;
-            Street = street;
+            // Проверки
+            if (string.IsNullOrWhiteSpace(city))
+            {
+                throw new ArgumentNullException(nameof(city));
+            }
+            else
+            { 
+                City = city;
+            }
+
+            if (string.IsNullOrWhiteSpace(street))
+            {
+                throw new ArgumentNullException(nameof(street));
+            }
+            else
+            {
+                Street = street;
+            }
         }
     }
 }

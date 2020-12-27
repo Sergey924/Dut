@@ -14,7 +14,16 @@ namespace HW2
         // Конструктор
         public Restaurant(string nameRestaraunt, Address address)
         {
-            NameRestaraunt = nameRestaraunt;
+            // Проверка
+            if (string.IsNullOrWhiteSpace(nameRestaraunt))
+            {
+                throw new ArgumentNullException(nameof(nameRestaraunt));
+            }
+            else
+            {
+                NameRestaraunt = nameRestaraunt;
+            }
+
             Address = address;
         }
 

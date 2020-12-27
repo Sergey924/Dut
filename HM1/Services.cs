@@ -12,7 +12,15 @@ namespace HW1
         // Конструкор 
         public Services(string typeService)
         {
-            TypeService = typeService;  
+            // Проверка
+            if (string.IsNullOrWhiteSpace(typeService))
+            {
+                throw new ArgumentNullException(nameof(typeService));
+            }
+            else
+            {
+                TypeService = typeService;
+            }
         }
        
        

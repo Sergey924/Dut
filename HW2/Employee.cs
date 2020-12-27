@@ -15,8 +15,25 @@ namespace HW2
         // Конструктор
         public Employee(string firstName, string secondName)
         {
-            FirstName = firstName;
+            // Проверки
+            if (string.IsNullOrWhiteSpace(firstName) || firstName.Length < 1)
+            {
+                throw new ArgumentNullException(nameof(firstName));
+            }
+            else
+            {
+                FirstName = firstName;
+            }
+
+            if (string.IsNullOrWhiteSpace(secondName) || secondName.Length <1)
+            {
+                throw new ArgumentNullException(nameof(secondName));
+            }
+            else
+            { 
             SecondName = secondName;
+            }
+
             FullName = FirstName + SecondName;
         }
 

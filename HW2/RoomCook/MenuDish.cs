@@ -10,6 +10,12 @@ namespace HW2
         // Поле
         public string Title = "Menu";
 
+        // Конструктор
+        public MenuDish()
+        {
+        }
+
+
         // Лист в котором хранятся все блюда
 
         List<Dish> menucook = new List<Dish>();

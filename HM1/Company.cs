@@ -14,7 +14,16 @@ namespace HW1
         // Конструктор
         public Company(string nameCompany, Address address )
         {
-            NameCompany = nameCompany;
+            // Проверка
+            if (string.IsNullOrWhiteSpace(nameCompany))
+            {
+                throw new ArgumentNullException(nameof(nameCompany));
+            }
+            else
+            {
+                NameCompany = nameCompany;
+            }
+
             Address = address;
             
         }
