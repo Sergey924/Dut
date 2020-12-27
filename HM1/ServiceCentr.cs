@@ -5,11 +5,11 @@ using System.Text;
 namespace HW1
 { 
     // Класс Сервисный Центр
-    class ServiceCentr 
+    class ServiceCentr : IService_Center
     {
         // Свойства
         public string NameCentr { get; set; }
-        Address Address { get; set; }
+        public Address Address { get; set; }
         
         // Конструктор
         public ServiceCentr(string nameCentr, Address address) 

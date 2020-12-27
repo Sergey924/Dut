@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HW1
 { // Класс Услуги
-    class Services
+   public class Services : IServices
     {
         // Свойсвтва
         public string TypeService { get; set; }
