@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HW1
 {
- // Класс Компания
+ // Класс IT_Servise, наследует абстрактный класс Компания
     public  class IT_Service : Company
     {
      
