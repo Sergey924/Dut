@@ -22,7 +22,7 @@ namespace HW2
             ID_Order = rnd.Next(0_10000);
 
             // Проверка
-            if (string.IsNullOrWhiteSpace(typeOrder))
+            if (string.IsNullOrEmpty(typeOrder))
             {
                 throw new ArgumentNullException(nameof(typeOrder));
             }

@@ -15,7 +15,7 @@ namespace HW1
         public ServiceCentr(string nameCentr, Address address) 
         {
             // Проверка
-            if (string.IsNullOrWhiteSpace(nameCentr))
+            if (string.IsNullOrEmpty(nameCentr))
             {
                 throw new ArgumentNullException(nameof(nameCentr));
             }

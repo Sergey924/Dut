@@ -13,7 +13,7 @@ namespace HW1
         public Services(string typeService)
         {
             // Проверка
-            if (string.IsNullOrWhiteSpace(typeService))
+            if (string.IsNullOrEmpty(typeService))
             {
                 throw new ArgumentNullException(nameof(typeService));
             }

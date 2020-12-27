@@ -15,7 +15,7 @@ namespace HW2
         public Address(string city, string street)
         {
             // Проверки
-            if (string.IsNullOrWhiteSpace(city))
+            if (string.IsNullOrEmpty(city))
             {
                 throw new ArgumentNullException(nameof(city));
             }
@@ -24,7 +24,7 @@ namespace HW2
                 City = city;
             }
 
-            if (string.IsNullOrWhiteSpace(street))
+            if (string.IsNullOrEmpty(street))
             {
                 throw new ArgumentNullException(nameof(street));
             }

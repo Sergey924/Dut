@@ -4,52 +4,45 @@ using System.Text;
 
 namespace HW1
 {
- // Класс Компания
-    public  class Company : Description // Наследует класс Description
+    // Абстрактный класс Комания, создан для наследования
+   public abstract class Company
     {
-       // Свойства класса
+        // Автосвойста
         public string NameCompany { get; set; }
+
+        public string DescriptCompany { get; set; }
         Address Address { get; set; }
 
         // Конструктор
-        public Company(string nameCompany, Address address )
+        protected Company(string nameCompany, string descriptCompany, Address address)
         {
-            // Проверка
-            if (string.IsNullOrWhiteSpace(nameCompany))
+            // Проверки
+            if (string.IsNullOrEmpty(nameCompany))
             {
                 throw new ArgumentNullException(nameof(nameCompany));
             }
             else
-            {
-                NameCompany = nameCompany;
+            { 
+            NameCompany = nameCompany;
             }
 
+            if (string.IsNullOrEmpty(descriptCompany))
+            {
+                throw new ArgumentNullException(nameof(descriptCompany));
+            }
+            else
+            {
+                DescriptCompany = descriptCompany;
+            }
             Address = address;
-            
-        }
-        // Лист в котором хранятся данные о сотрудниках
-
-        List<Employee> employees = new List<Employee>();
-
-        // Метод добавления сотрудника
-        public void AddEmployee(Employee employee)
-        {
-            employees.Add(employee);
         }
 
-        // Метод удаления сотрудника
-        public void DeletEmployee(Employee employee)
-        {
-            employees.Remove(employee);
-        }
+
 
         // Переопределённый метод ToString
-        public override string  ToString()
+        public override string ToString()
         {
             return String.Format($"Name Company: {NameCompany} \nDecription: {DescriptCompany} \nAddress: city. { Address.City} str. {Address.Street} ");
         }
     }
-
-    
-
 }

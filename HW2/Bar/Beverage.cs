@@ -16,7 +16,7 @@ namespace HW2
         public Beverage(string nameBeverage, double weightBeverage, decimal priceBeverage)
         {
             // Проверки
-            if (string.IsNullOrWhiteSpace(nameBeverage))
+            if (string.IsNullOrEmpty(nameBeverage))
             {
                 throw new ArgumentNullException(nameof(nameBeverage));
             }

@@ -16,7 +16,7 @@ namespace HW2
         public Employee(string firstName, string secondName)
         {
             // Проверки
-            if (string.IsNullOrWhiteSpace(firstName) || firstName.Length < 1)
+            if (string.IsNullOrEmpty(firstName) || firstName.Length < 1)
             {
                 throw new ArgumentNullException(nameof(firstName));
             }
@@ -25,7 +25,7 @@ namespace HW2
                 FirstName = firstName;
             }
 
-            if (string.IsNullOrWhiteSpace(secondName) || secondName.Length <1)
+            if (string.IsNullOrEmpty(secondName) || secondName.Length <1)
             {
                 throw new ArgumentNullException(nameof(secondName));
             }

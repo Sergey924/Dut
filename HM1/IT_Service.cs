@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HW1;
 
-namespace HW2
+namespace HW1
 {
-    // Класс Ресторан наследует класс Описание
-    class Restaurant : Company
+ // Класс Компания
+    public  class IT_Service : Company
     {
+     
         // Конструктор
-        public Restaurant(string nameCompany, string descriptCompany, HW1.Address address) : base(nameCompany, descriptCompany, address)
+        public IT_Service(string nameCompany, string descriptCompany, Address address) : base(nameCompany, descriptCompany, address)
         {
         }
 
-        // Лист в котором хранятся данные о работниках
+        // Лист в котором хранятся данные о сотрудниках
 
         List<Employee> employees = new List<Employee>();
-
-       
 
         // Метод добавления сотрудника
         public void AddEmployee(Employee employee)
@@ -31,6 +29,8 @@ namespace HW2
             employees.Remove(employee);
         }
 
-     
     }
+
+    
+
 }
